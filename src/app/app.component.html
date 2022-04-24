@@ -1,0 +1,72 @@
+
+
+
+
+<!-- <div style="font-size: 30px;">Register</div>
+<div>
+  
+  
+  UserName: <input type="text" id="userreg" > <br> <br>
+  Password: <input type="text" id="pwdreg" >  <br> <br> 
+  <button  (click)="Register()">Register</button> <div>{{jid}} </div>
+  <br> <br> <br> <br> -->
+  <div>
+    <div>
+  <div style="font-size: 30px;"> Register</div>
+  
+  <!-- <form [formGroup]="commForm"> -->
+    <br> <br>
+  UserName: <input type="text" id="userreg" > <br> <br>
+  Password: <input type="text" id="pwdreg" > <br> <br>
+  
+  <button  (click)="Register()">Register</button>  <br> <div>{{jidr}} </div> <br> <br> <br> <br>
+  
+  </div>
+  <div>
+  <div style="font-size: 30px;"> Login</div>
+  
+  <!-- <form [formGroup]="commForm"> -->
+    <br> <br>
+  JID: <input type="text" id="userlog" > <br> <br>
+  Password: <input type="text" id="pwdlog" > <br> <br>
+  
+  <button  (click)="Login()">Login</button>  <button  (click)="Logout()">Logout</button>  <br><div>{{jidl}} </div> <br> <br> <br> <br>
+  </div>
+
+  <div>
+  <div style="font-size: 30px;">Send a Message</div>
+  <br> <br>
+  JID: <input type="text" id="peerid" > <br> <br>
+  Message: <input type="text" id="message" > <br> <br>
+  <button (click)="send()">Send
+</button>
+<br> <br> <br> <br>
+<div style="font-size: 30px;"> Message Recieved</div>
+<br> <br>
+<div style="font-size: 20px;">{{from}}:-     {{messageRecived}} </div>
+</div>
+
+<!-- </form> -->
+
+<div style="position: absolute; left:500px; top:100px; ">
+  <!-- <video id='localVideo' style="background-color: #222;"   controls autoplay playsinline></video> <br> -->
+  <video id="localVideo" playsinline autoplay muted style="background-color: #222; height: 220px; width: 320px;"></video> 
+  <div *ngFor="let id of connectedPeerID"> 
+  <app-peer [jid]="id" ></app-peer>
+</div> 
+
+  <!-- <video controls="true">
+    <source src="https://www.youtube.com/watch?v=G32ThJakeHk&t=1643s" type="video/mp4" />
+</video> -->
+<br> <br>
+   Enter JID:  <input type="text" id="jid" > <br> <br>
+   <button (click)="startcall()"> Start Call </button>
+   <button (click)="stopcall()"> Stop Call </button>
+
+</div>
+</div>
+
+<audio id="callAudio"  autoplay>
+  <source id="callerAudio" type="audio/mp3"> 
+</audio>
+<!-- s -->
